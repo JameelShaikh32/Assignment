@@ -31,7 +31,8 @@ form.addEventListener('submit', (e) => {
         errorMessage.style.visibility = "visible";
         errorMessage.innerHTML = error.join(", ")
     } else {
-        var title = document.querySelector('.title h1');
-        title.innerHTML = "Password Changed";
+        e.preventDefault();
+        document.getElementById('rform').style.visibility = 'hidden';
+        document.getElementById('chform').style.visibility = 'visible';
     }
 });
